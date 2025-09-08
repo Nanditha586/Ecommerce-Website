@@ -10,7 +10,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "ecommerce-website-gzce.onrender.com",  
+   "https://ecommerce-website-gzce.onrender.com/ "
     
 ]
 INSTALLED_APPS = [
