@@ -2,17 +2,18 @@ import os
 from pathlib import Path
 from datetime import timedelta
 
+from decouple import config, Csv
+
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "change-this-in-production"
 DEBUG = True
 ALLOWED_HOSTS = [
-   "127.0.0.1",
-    "localhost",
-    "ecommerce-website-gzce.onrender.com",  
-    
+   "*"
 ]
+
 INSTALLED_APPS = [
     'django.contrib.admin','django.contrib.auth','django.contrib.contenttypes',
     'django.contrib.sessions','django.contrib.messages','django.contrib.staticfiles',
