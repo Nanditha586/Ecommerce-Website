@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Single Page E-commerce</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{% static 'shop/styles.css' %}" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Shop</h1>
+      <div id="auth-area">
+        <div id="user-info"></div>
+        <button id="btn-show-login">Login</button>
+        <button id="btn-show-register">Register</button>
+        <button id="btn-logout" style="display:none">Logout</button>
+        <button id="btn-cart">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="auth-section" class="hidden">
+        <h2 id="auth-title">Login</h2>
+        <form id="auth-form">
+          <input id="username" placeholder="username" required />
+          <input id="email" placeholder="email (register only)" />
+          <input id="password" type="password" placeholder="password" required />
+          <button type="submit" id="auth-submit">Submit</button>
+        </form>
+      </section>
+
+      <section id="filters">
+        <input id="search" placeholder="Search name or category" />
+        <select id="category-filter">
+  <option value="">All Categories</option>
+</select>
+
+        <input id="price-min" type="number" placeholder="Min price" />
+        <input id="price-max" type="number" placeholder="Max price" />
+        <button id="apply-filters">Apply</button>
+      </section>
+
+      <section id="listing" class="grid"></section>
+
+      <section id="cart-section" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="{% static 'shop/app.js' %}"></script>
+</body>
+</html>
