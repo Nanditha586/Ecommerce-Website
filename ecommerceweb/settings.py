@@ -8,8 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "change-this-in-production"
 DEBUG = True
 ALLOWED_HOSTS = [
-   
-    "ecommerce-website-gzce.onrender.com"
+   "127.0.0.1",
+    "localhost",
+    "ecommerce-website-gzce.onrender.com",  
     
 ]
 INSTALLED_APPS = [
